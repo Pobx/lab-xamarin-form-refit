@@ -25,10 +25,12 @@
     <None Remove="Refit.HttpClientFactory" />
     <None Remove="ViewModels\" />
     <None Remove="Views\" />
+    <None Remove="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 </Project>
