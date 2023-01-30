@@ -1,14 +1,22 @@
 ﻿using System;
+using System.Text.Json.Serialization;
+
 namespace RefitLabWithXamarinForm.Models
 {
     public class ResponseToken
     {
-        public string access_token { get; set; }
-        public int expires_in { get; set; }
-        public string token_type { get; set; }
-        public string refresh_token { get; set; }
-        public string scope { get; set; }
-        public Data data { get; set; }
+        [JsonPropertyName("access_token")]
+        public string AccessToken { get; set; }
+        [JsonPropertyName("expires_in")]
+        public int Expires_in { get; set; }
+        [JsonPropertyName("token_type")]
+        public string TokenType { get; set; }
+        [JsonPropertyName("refresh_token")]
+        public string RefreshToken { get; set; }
+        [JsonPropertyName("scope")]
+        public string Scope { get; set; }
+        [JsonPropertyName("data")]
+        public Data Data { get; set; }
     }
 
     public class Data
