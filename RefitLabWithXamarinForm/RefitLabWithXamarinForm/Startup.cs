@@ -14,6 +14,7 @@ namespace RefitLabWithXamarinForm
                 .AddSimpleService()
                 .AddViewModels()
                 .AddRestApi()
+                .AddIdentity()
                 .BuildServiceProvider();
 
             ServiceProvider = serviceProvider;

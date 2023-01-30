@@ -1,0 +1,14 @@
+﻿using System;
+using Refit;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace RefitLabWithXamarinForm.Services
+{
+	public interface IIdentityClient
+	{
+        [Post("/connect/token")]
+        Task<IApiResponse<object>> AuthenGuest([Body(BodySerializationMethod.UrlEncoded)] IDictionary<string, string> data, [HeaderCollection] IDictionary<string, string> headers);
+    }
+}
+

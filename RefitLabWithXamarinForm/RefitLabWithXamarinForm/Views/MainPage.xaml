@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="RefitLabWithXamarinForm.MainPage"
-             xmlns:local="clr-namespace:RefitLabWithXamarinForm"
-             x:DataType="local:MainPageModel">
+             x:Class="RefitLabWithXamarinForm.Views.MainPage"
+             xmlns:local="clr-namespace:RefitLabWithXamarinForm.ViewModels"
+             x:DataType="local:MainPageViewModel">
 
     <StackLayout>
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
@@ -39,6 +39,20 @@
                FontSize="20"
                HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand" />
+
+         <Button Text="Login..nnnn"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Command="{Binding LoginCommand}" />
+
+        <Label
+               Text="{Binding identityResponse}"
+               FontSize="20"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+
+
+
     </StackLayout>
 
 </ContentPage>

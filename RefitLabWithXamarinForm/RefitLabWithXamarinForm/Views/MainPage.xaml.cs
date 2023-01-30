@@ -8,16 +8,17 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Refit;
 using RefitLabWithXamarinForm.Services;
+using RefitLabWithXamarinForm.ViewModels;
 using Xamarin.Forms;
 
-namespace RefitLabWithXamarinForm
+namespace RefitLabWithXamarinForm.Views
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = Startup.ServiceProvider.GetService<MainPageModel>();
+            BindingContext = Startup.ServiceProvider.GetService<MainPageViewModel>();
         }
     }
 }
