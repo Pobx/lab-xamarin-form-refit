@@ -117,7 +117,7 @@ namespace RefitLabWithXamarinForm.ViewModels
 
             Console.WriteLine($"Start request...");
             identityResponse = "Waiting...";
-            var response = await _identityClient.AuthenGuest(data, headers);
+            var response = await _identityClient.Authentication(data, headers);
             if (!response.IsSuccessStatusCode)
             {
                 Console.WriteLine($"Error: {response.Error.Content}");
